@@ -26,7 +26,9 @@ const Distributors = () => {
 
   useEffect(() => {
     fetchDistributors();
+    resetForm()
   }, []);
+
 
   // Fetch distributors from API
   const fetchDistributors = async () => {

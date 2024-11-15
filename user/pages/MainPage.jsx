@@ -8,20 +8,7 @@ import '../pages/MainPage.css';
 import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
-  const navigate = useNavigate();
-  const LoggedUser = JSON.parse(localStorage.getItem('userData'));
-
-  useEffect(() => {
-    if (!LoggedUser) {
-      navigate('/Auth/login');
-    } else if (LoggedUser.isAdmin === 1) {
-      navigate('/Dashboard');
-    }
-  }, [LoggedUser, navigate]);
-
-  if (!LoggedUser || LoggedUser.isAdmin === 1) {
-    return null; // Avoid rendering the component if navigating away
-  }
+  
 
   return (
     <>

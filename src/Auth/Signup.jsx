@@ -14,7 +14,7 @@ const Signup = () => {
   const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; 
     setFormData({
       ...formData,
       [name]: value,

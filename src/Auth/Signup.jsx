@@ -24,7 +24,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/rim/registerUser', formData);
+      const response = await axios.post('https://rimhub.in/rim/registerUser', formData);
       
       if (response.status === 200) {
         setMessage('Registration successful!');

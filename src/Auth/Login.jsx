@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     
     try {
-      const response = await axios.post('http://localhost:5000/rim/loginUser', { username, password });
+      const response = await axios.post('https://rimhub.in/rim/loginUser', { username, password });
       
       if (response.data.userData.isLogin) {
         localStorage.setItem('userData', JSON.stringify(response.data.userData));

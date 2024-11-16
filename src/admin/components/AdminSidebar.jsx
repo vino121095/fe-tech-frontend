@@ -83,7 +83,7 @@ const AdminSidebar = ({handleBackClick}) => {
                       Distributors</a>
                   </li>
                 <li><a href=""><img src={Shipment} alt="" /> Shipments</a></li>
-                <li><a href=""><img src={Transport} alt="" /> Transport</a></li>
+                <li><a href="/Dashboard/Transport" onClick={(e) => handleNavigation}><img src={Transport} alt="" /> Transport</a></li>
                 <li>
                     <a href="/Dashboard/OrderSummary" onClick={(e) => handleNavigation('/Dashboard/OrderSummary',e)}><img src={Order} alt="" />
                       Order Summary</a>

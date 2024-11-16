@@ -22,22 +22,28 @@ const Card = () => {
   }, []);
  
   const handleAddToCard = async (product) => {
-    try {
-      // API call to add product to cart
-      const response = await axios.post(baseurl+'/rim/addtocart', {
-        productId: product.product_id,
-        userId: LoggedUser.user_id,
-        quantity: 1
-      });
- 
-      // Update the cart state if needed (optional, based on response)
-      setCartItems([...cartItems, product]);
- 
-      // Redirect the user to the "Cart" page
-      navigate('/user/pages/Cart');
-    } catch (error) {
-      console.error('Error adding product to cart:', error);
+    if(LoggedUser){
+      try {
+        // API call to add product to cart
+        const response = await axios.post(baseurl+'/rim/addtocart', {
+          productId: product.product_id,
+          userId: LoggedUser.user_id,
+          quantity: 1
+        });
+   
+        // Update the cart state if needed (optional, based on response)
+        setCartItems([...cartItems, product]);
+   
+        // Redirect the user to the "Cart" page
+        navigate('/user/pages/Cart');
+      } catch (error) {
+        console.error('Error adding product to cart:', error);
+      }
+    }else{
+      alert('Please login to add products to cart.')
+      navigate('/Auth/Login');
     }
+    
   };
  
   return (

@@ -31,6 +31,15 @@ const NavBar = () => {
     toggleDropdown()
     navigate('')
   }
+  const handleProfileClick = () => {
+    toggleDropdown()
+    navigate('/user/pages/ProfileInfo')
+  }
+  const handleDistributorsClick = () => {
+    toggleDropdown()
+    navigate('/user/pages/StoreDetails')
+  }
+
 
   // const handleSignupClick = () => {
   //   toggleDropdown()
@@ -48,8 +57,9 @@ const NavBar = () => {
        <img className='userLogo' src={userLogo} alt="" onClick={toggleDropdown} />
        {isDropdownOpen && (
          <div className='dropdown-menu'>
-           <a href="/user/pages/ProfileInfo" onClick={handleLoginClick}>Profile</a>
+           <a href="/user/pages/ProfileInfo" onClick={handleProfileClick}>Profile</a>
            <a href="/user/pages/OrderHistory">Orders</a>
+           <a href="/user/pages/StoreDetails" onClick={handleDistributorsClick}>Distributors</a>
            <a href="#">Logout</a>
          </div>
        )}

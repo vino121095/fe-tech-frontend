@@ -1,69 +1,79 @@
 .card-section{
-    margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 100px 20px 0px 20px;
+    margin: 50px 20px 0px 20px;
 }
 
-.Mob-nav{
-    display: none;
-}
-
-.card{
-    width: 280px;
-    height: 580px;
+.StoreDetailsCard {
+    width: 300px;
+    height: auto !important;
     border-radius: 10px;
-}
+    margin: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    transform: translateY(0); /* Initial position */
+  }
+  
+  /* Hover Effect */
+  .StoreDetailsCard:hover {
+    transform: translateY(-10px); /* Slides up slightly */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 25px; /* Increases shadow for lift effect */
+  }
 
-.card img{
+.StoreDetailsCard img{
     margin-top: 30px;
-    width: 220px;
-    height: 220px !important;
+    width: 78%;
+    height: auto !important;
     margin-left: 11%;
 }
 
-.card .p1{
+.StoreDetailsCard .p1{
    margin-top: 20px;
+   margin-left: 10%;
    padding: 0%;
 }
 
-.card .p2{
+.StoreDetailsCard .p2{
     margin-top: 10px;
+    margin-left: 10%;
     padding: 0%;
 }
 
-.card .p3{
+.StoreDetailsCard .p3{
     margin-top: 0px;
+    margin-left: 10%;
     padding: 0%;
 }
 
-.card .p4{
+.StoreDetailsCard .p4{
     margin-top: 0px;
+    margin-left: 10%;
     padding: 0%;
     color: blue;
 }
 
-.card .rating{
+.StoreDetailsCard .rating{
     margin-top: -7px !important;
+    margin-left: 10% !important;
     padding: 0%;
     width: 120px !important;
     height: 30px !important;
-    margin-left: 21px !important;
 }
-.card .btn{
+.StoreDetailsCard .StoreDetailsBtn{
     height: 40px;
     width: 220px;
     border-radius: 10px;
     background-color: #F24E1E !important;
     color: white;
-    font-size: 24px;
+    font-size: 16px !important;
     font-weight: 700;
     border: none;
     justify-content: center;
     align-items: center;
-    margin-left: 10% !important;
+    margin-left: 13% !important;
     margin-top: 5px;
+    margin-bottom: 30px;
     padding: 0%;
 }
 

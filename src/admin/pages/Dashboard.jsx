@@ -10,6 +10,7 @@ import Technicians from "../components/products/Technicians";
 import OrderSummary from "../components/products/OrderSummary";
 import Distributors from "../components/products/Distributors";
 import DistributorsViewDetails from "../components/products/DistributorsViewDetails";
+import Transport from "../components/products/Transport";
 import "../pages/Dashboard.css";
 
 export default function Dashboard() {
@@ -65,6 +66,7 @@ export default function Dashboard() {
               <Route path="distributors" element={<Distributors />} />
               <Route path="Distributors/DistributorsViewDetails/:id" element={<DistributorsViewDetails />} />
               <Route path="technicians" element={<Technicians />} />
+              <Route path="Transport" element={<Transport />} />
               <Route path="OrderSummary" element={<OrderSummary />} />
             </Routes>
           </main>

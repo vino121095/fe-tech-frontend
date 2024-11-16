@@ -10,6 +10,19 @@ main{
     background-color: #FAFAFA;
 }
 
+/* Media Query for Tablets */
+@media (min-width: 481px) and (max-width: 768px){
+    .sideNav{
+        width: 100%;
+        margin-top: 0;
+    }
+
+    main{
+        height: auto;
+        overflow: hidden;
+    }
+}
+
  /* Media Query for Mobile Devices */
  @media (max-width: 480px){
     main{

@@ -13,6 +13,16 @@ const Cart = () => {
   const userId = LoggedUser?.user_id;
 
   useEffect(() => {
+    if (!LoggedUser || LoggedUser.isAdmin !== 0) {
+      navigate("/Auth/login"); // Redirect if not logged in or not an admin
+    }
+  }, [LoggedUser, navigate]);
+
+  // if (!LoggedUser || LoggedUser.isAdmin !== 0) {
+  //   return ; // Prevent rendering if navigating away
+  // }
+
+  useEffect(() => {
     if (userId) {
       const fetchCartData = async () => {
         try {

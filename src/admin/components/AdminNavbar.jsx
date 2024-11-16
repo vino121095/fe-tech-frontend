@@ -65,6 +65,9 @@ const AdminNavbar = () => {
       case "/Dashboard/OrderSummary":
         setTab("OrderSummary");
         break;
+      case "/Dashboard/Transport":
+        setTab("Transport");
+        break;
       default:
         setTab("Nothing");
         break;

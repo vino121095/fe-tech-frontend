@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import storeImg from "../assets/store-img.png";
 import rating from "../assets/rating.png";
 import '../pages/StoreDetails.css'
+import NavBar from "../components/NavBar";
 
 
 const StoreDetails = () => {
@@ -13,6 +15,7 @@ const StoreDetails = () => {
   };
   return (
     <>
+    <NavBar />
       <div class="search-container">
         <input type="text" class="search-input" placeholder="Search" />
         <div class="search-icons">
@@ -71,24 +74,7 @@ const StoreDetails = () => {
       </div>
 
       <div className="card-section">
-        <div className="card">
-          <img src={storeImg} alt="" />
-          <p className="p1" style={{ fontSize: "22px", fontWeight: "700" }}>
-            Smart Accessories
-          </p>
-          <p className="p2" style={{ fontSize: "18px", fontWeight: "600" }}>
-            AC Spare Part Wholesalers{" "}
-          </p>
-          <p className="p3" style={{ fontSize: "18px", fontWeight: "600" }}>
-            Gandhipuram Coimbatore
-          </p>
-          <img className="rating" src={rating} alt="img" />
-          <p className="p4">
-            <i class="bi bi-telephone-fill"> View Mobile Number</i>
-          </p>
-          <button className="btn">Contact Supplier</button>
-        </div>
-        <div className="card">
+      <div className="StoreDetailsCard">
           <img src={storeImg} alt="" />
           <p className="p1" style={{ fontSize: "22px", fontWeight: "700" }}>
             Smart Accessories
@@ -108,51 +94,7 @@ const StoreDetails = () => {
           <p className="p4">
             <i class="bi bi-telephone-fill"> View Mobile Number</i>
           </p>
-          <button className="btn">Contact Supplier</button>
-        </div>
-        <div className="card">
-          <img src={storeImg} alt="" />
-          <p className="p1" style={{ fontSize: "22px", fontWeight: "700" }}>
-            Smart Accessories
-          </p>
-          <p className="p2" style={{ fontSize: "18px", fontWeight: "600" }}>
-            AC Spare Part Wholesalers{" "}
-          </p>
-          <p className="p3" style={{ fontSize: "18px", fontWeight: "600" }}>
-            Gandhipuram Coimbatore
-          </p>
-          <img
-            className="rating"
-            src={rating}
-            alt="img"
-            style={{ width: "122px", height: "40px" }}
-          />
-          <p className="p4">
-            <i class="bi bi-telephone-fill"> View Mobile Number</i>
-          </p>
-          <button className="btn">Contact Supplier</button>
-        </div>
-        <div className="card">
-          <img src={storeImg} alt="" />
-          <p className="p1" style={{ fontSize: "22px", fontWeight: "700" }}>
-            Smart Accessories
-          </p>
-          <p className="p2" style={{ fontSize: "18px", fontWeight: "600" }}>
-            AC Spare Part Wholesalers{" "}
-          </p>
-          <p className="p3" style={{ fontSize: "18px", fontWeight: "600" }}>
-            Gandhipuram Coimbatore
-          </p>
-          <img
-            className="rating"
-            src={rating}
-            alt="img"
-            style={{ width: "122px", height: "40px" }}
-          />
-          <p className="p4">
-            <i class="bi bi-telephone-fill"> View Mobile Number</i>
-          </p>
-          <button className="btn">Contact Supplier</button>
+          <button className="StoreDetailsBtn">Contact Supplier</button>
         </div>
       </div>
 

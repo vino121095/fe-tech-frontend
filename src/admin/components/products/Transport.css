@@ -1,0 +1,30 @@
+/* Container styling for alignment */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .transportSearch{
+    width: 500px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    border: none;
+  }
+  
+  
+  /* Search button styling */
+  .transportSearchBtn {
+    width: 100% !important;
+    background-color: #ff5722;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: -4%;
+  }
+  
+  
